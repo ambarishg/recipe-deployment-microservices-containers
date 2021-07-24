@@ -1,3 +1,5 @@
+az account show --output table
+
 # Build the docker image       
 docker build -t redwine .   
 
@@ -23,7 +25,7 @@ docker push agwineacr.azurecr.io/redwine:v1
 # Update the  Azure Container Registry 
 az acr update -n agwineacr --admin-enabled true       
 
-# Get the password of the Azure CLI 
+# Get the password of the Azure Container Registry  
 password=$(az acr credential show --name agwineacr --query passwords[0].value --output tsv)
 
 # Create the Azure Container    
