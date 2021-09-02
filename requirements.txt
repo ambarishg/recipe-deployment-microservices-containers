@@ -1,4 +1,0 @@
-pandas 
-sklearn
-streamlit
-tensorflow
