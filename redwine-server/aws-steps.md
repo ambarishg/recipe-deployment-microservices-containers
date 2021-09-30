@@ -30,11 +30,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 kubectl apply -f redwine-eks-ingress.yaml
 
 # Get the loadbalancer URL          
-export loadbalancer=$(kubectl get svc redwine-service -o jsonpath='{.status.loadBalancer.ingress[*].hostname')           
+export loadbalancer=$(kubectl get svc redwine-service -o jsonpath='{.status.loadBalancer.ingress[*].hostname}')              
 curl -m3 -v ${loadbalancer}           
-curl -L -v ${loadbalancer}        
-curl -k -s http://${loadbalancer}         
-curl -vv ${loadbalancer}      
+curl -L -v ${loadbalancer}       
+curl -k -s http://${loadbalancer}        
+curl -vv ${loadbalancer}     
 
 # Delete the cluster
 eksctl delete cluster --name <prod>
