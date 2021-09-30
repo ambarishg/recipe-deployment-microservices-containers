@@ -3,7 +3,7 @@ This repo will show
 * How to deploy a microservice in local Docker Desktop           
 * How to deploy a microservice in local Kubernetes Cluster                
 * How to deploy a microservice in Azure Container Instances          
-* How to deploy a microservice in Azure Kubernetes Cluster               
+* How to deploy a microservice in Azure Kubernetes Cluster [ with and without ingress ]                 
 * How to deploy a microservice in AWS Fargate          
 * How to deploy a microservice in AWS EKS                   
 
