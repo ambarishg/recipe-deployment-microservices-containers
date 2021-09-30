@@ -10,7 +10,8 @@ docker tag redwineflask:latest 113170463366.dkr.ecr.us-east-1.amazonaws.com/redw
 # Push the image into the  ECR Repository
 docker push 113170463366.dkr.ecr.us-east-1.amazonaws.com/redwine-repo:v1
 
-############################################################
+<hr/>
+
 
 # Create the EKS cluster
 eksctl create cluster \
