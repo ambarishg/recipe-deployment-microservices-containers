@@ -4,9 +4,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd 
 
-# url = 'http://localhost:5000/predict'
-# url = 'http://redwineapp.centralindia.azurecontainer.io:5000/predict'
-url ='http://34.201.5.16:5000/predict'
+#url = 'http://localhost:5000/predict'
+#url = 'http://redwineapp.centralindia.azurecontainer.io:5000/predict'
+url ='http://3.90.37.146:5000/predict'
+# url ='http://40.81.253.69:5000/predict'
 
 
 

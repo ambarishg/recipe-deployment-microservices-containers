@@ -5,7 +5,7 @@ metadata:
   labels:
     app: web
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: web
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: wineimage
-          image: ambarishg/redwineflask:v1
+          image: 113170463366.dkr.ecr.us-east-1.amazonaws.com/redwine-repo:v1
           ports:
             - containerPort: 5000
 ---
@@ -25,8 +25,24 @@ kind: Service
 metadata:
   name: redwine-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - port: 5000
   selector:
     app: web
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: redwine-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+ 
+  rules:
+  - http:
+      paths:
+        - path: /
+          backend:
+            serviceName: redwine-service
+            servicePort: 5000
