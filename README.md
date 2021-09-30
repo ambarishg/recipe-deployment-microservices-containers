@@ -17,8 +17,6 @@ This repo will show
 
 * **redwine-client** is a console based application which calls the the microservice implemented in **redwine-streamlit-server**           
 
-* **redwine-client** is a console based application which calls the the microservice implemented in **redwine-streamlit-server**    
-
 * **redwine-streamlit** is a Streamlit based application which calls the the microservice implemented in **redwine-streamlit-server**    
 
 # **redwine-streamlit-server**
@@ -30,3 +28,22 @@ This repo will show
 |  requirements.txt | The libraries required for the Dockerfile are present in the requirements.txt. The Dockerfile uses the requirements.txt   |
 |  docker-steps.md | The steps required to deploy the microservices container in the local Docker Desktop and the local Docker Kubernetes cluster  |
 |  redwine-local.yaml | The YAML file which we would be using in the local Kubernetes cluster  |
+
+<hr/>
+
+## Deployment to Azure          
+
+|  FileName  |  Description |
+|---|---|
+| azure_deployment_steps_redwine_flask.md |   Has the steps for the deployment into Azure Container Instances        |
+| aks-steps.md |   Has the steps for the deployment into Azure Kubernetes Services        |
+| redwine-azure.yaml |   Has the steps for the deployment into Azure Kubernetes Services        |
+
+<hr/>
+
+## Deployment to AWS          
+
+|  FileName  |  Description |
+|---|---|
+| aws-steps.md |   Has the steps for the deployment into AWS Fargate and AWS EKS        |
+| redwine-eks-ingress.yaml |   Has the YAML for the pods , service and the ingress         |

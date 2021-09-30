@@ -21,6 +21,11 @@ eksctl create cluster \
 aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 aws eks --region us-east-1 update-kubeconfig --name agredwine4
 
+# Creating the mandatory resources for NGINX Ingress in the cluster            
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/aws/deploy.yaml           
+
+`The above manifest file also launches the Network Load Balancer(NLB).`      
+
 # Run the YAML
 kubectl apply -f redwine-eks-ingress.yaml
 
