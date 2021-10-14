@@ -10,8 +10,8 @@ docker exec -it  confident_moore /bin/bash
 <!-- kubectl config use-context my-cluster-name   -->
 kubectl config use-context docker-desktop
 
-docker tag  redwineflask:latest ambarishg/redwineflask:v1
-docker push  ambarishg/redwineflask:v1
+docker tag  redwineflask:latest ambarishg/redwineflask:v1                   
+docker push  ambarishg/redwineflask:v1             
 
 kubectl apply -f redwine-local.yaml
 
