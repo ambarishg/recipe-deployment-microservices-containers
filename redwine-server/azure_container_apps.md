@@ -64,7 +64,7 @@ az containerapp create \
 --ingress 'external' \
 --query configuration.ingress.fqdn
 
-#https://redwineapp.happyforest-21fb9d48.canadacentral.azurecontainerapps.io/
+     
 
 # References         
 https://docs.microsoft.com/en-us/azure/container-apps/get-started?ocid=AID3042118&tabs=bash             
