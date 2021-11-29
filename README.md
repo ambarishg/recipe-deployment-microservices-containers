@@ -3,7 +3,8 @@ This repo will show
 * How to deploy a microservice in local Docker Desktop           
 * How to deploy a microservice in local Kubernetes Cluster                
 * How to deploy a microservice in Azure Container Instances          
-* How to deploy a microservice in Azure Kubernetes Cluster [ with and without ingress ]                 
+* How to deploy a microservice in Azure Kubernetes Cluster [ with and without ingress ]       
+* How to deploy a microservice in Azure Container Apps                     
 * How to deploy a microservice in AWS Fargate          
 * How to deploy a microservice in AWS EKS                   
 
@@ -39,6 +40,7 @@ This repo will show
 | aks-steps.md |   Has the steps for the deployment into Azure Kubernetes Services        |
 | redwine-azure.yaml |   Has the YAML for the pods , service for deployment into AKS. This deployment does not include the deployment of the ingress controller       |
 | azure-ingress.md |   Has the steps for the deployment into Azure Kubernetes Services for the NGINX ingress controller. This installs the NGINX ingress controller through helm charts       |
+| azure_container_apps.md |   Has the steps for the deployment into Azure Container Apps           |
 | redwine-azure.yaml |   Has the YAML for the pods , service for deployment into AKS. This deployment does not include the deployment of the ingress controller       |
 | redwine-azure-ingress.yaml |   Has the YAML for the pods , service and ingress for deployment into AKS. .     |
 
