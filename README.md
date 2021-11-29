@@ -37,7 +37,7 @@ This repo will show
 |  FileName  |  Description |
 |---|---|
 | azure_deployment_steps_redwine_flask.md |   Has the steps for the deployment into Azure Container Instances        |
-| aks-steps.md |   Has the steps for the deployment into Azure Kubernetes Services        |
+| service_principal_aks_steps.md |   Has the steps for the deployment into Azure Kubernetes Services using the Service Principal       |
 | redwine-azure.yaml |   Has the YAML for the pods , service for deployment into AKS. This deployment does not include the deployment of the ingress controller       |
 | azure-ingress.md |   Has the steps for the deployment into Azure Kubernetes Services for the NGINX ingress controller. This installs the NGINX ingress controller through helm charts       |
 | azure_container_apps.md |   Has the steps for the deployment into Azure Container Apps           |
