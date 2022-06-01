@@ -8,10 +8,9 @@ RESOURCE_GROUP="winegroup"
 LOCATION="canadacentral"                 
 CONTAINERAPPS_ENVIRONMENT="redwine-env"  
 
-az containerapp env create \
-  --name $CONTAINERAPPS_ENVIRONMENT \
-  --resource-group $RESOURCE_GROUP \
-  --location $LOCATION
+az group create --name $RESOURCE_GROUP --location $LOCATION
+
+az containerapp env create --name $CONTAINERAPPS_ENVIRONMENT --resource-group $RESOURCE_GROUP --location $LOCATION
 
 # Create a Azure Container Registry   ( Run in Console )   
 az acr create --resource-group winegroup --name agwineacr --sku Basic 
