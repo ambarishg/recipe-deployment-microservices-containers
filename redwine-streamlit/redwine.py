@@ -6,14 +6,14 @@ import pandas as pd
 
 #url = 'http://localhost:5000/predict'
 #url = 'http://redwineapp.centralindia.azurecontainer.io:5000/predict'
-url ='http://3.90.37.146:5000/predict'
+url ='https://redwineapp.purplehill-82dd12d3.canadacentral.azurecontainerapps.io/predict'
 # url ='http://40.81.253.69:5000/predict'
 
 
 
 st.title("Red wine prediction system")
 
-col1, col2,col3 = st.beta_columns(3)
+col1, col2,col3 = st.columns(3)
 
 fixed_acidity = np.float(col1.text_input("Fixed Acidity",7.4))
 volatile_acidity = np.float(col2.text_input("Volatile Acidity",0.7))
