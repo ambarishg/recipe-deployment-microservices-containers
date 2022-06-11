@@ -6,8 +6,8 @@ import pandas as pd
 
 #url = 'http://localhost:5000/predict'
 #url = 'http://redwineapp.centralindia.azurecontainer.io:5000/predict'
-url ='https://redwineapp.purplehill-82dd12d3.canadacentral.azurecontainerapps.io/predict'
-# url ='http://40.81.253.69:5000/predict'
+url ='https://redwineapp.lemongrass-1ee42dd2.canadacentral.azurecontainerapps.io/predict'
+# url ='http://20.116.81.213:5000/predict'
 
 
 
