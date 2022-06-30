@@ -1,10 +1,10 @@
 # Create the Repository in ECR
 aws ecr create-repository --repository-name redwine-repo 
 
-# Create the Login and Password for the ECR Repository
+# Get the Login and Password for the ECR Repository
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 113170463366.dkr.ecr.us-east-1.amazonaws.com
 
-# Create the Login and Password for the ECR Repository
+# Tag the docker container image
 docker tag redwineflask:latest 113170463366.dkr.ecr.us-east-1.amazonaws.com/redwine-repo:v1
 
 # Push the image into the  ECR Repository
@@ -15,12 +15,12 @@ docker push 113170463366.dkr.ecr.us-east-1.amazonaws.com/redwine-repo:v1
 
 # Create the EKS cluster
 eksctl create cluster \
---name agredwine5 \
+--name agredwine \
 --region us-east-1 
 
 # Update the kubeconfig
 aws eks --region <region-code> update-kubeconfig --name <cluster_name>
-aws eks --region us-east-1 update-kubeconfig --name agredwine4
+aws eks --region us-east-1 update-kubeconfig --name agredwine
 
 # Creating the mandatory resources for NGINX Ingress in the cluster            
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/aws/deploy.yaml           
@@ -39,4 +39,4 @@ curl -vv ${loadbalancer}
 
 # Delete the cluster
 eksctl delete cluster --name <prod>
-eksctl delete cluster --name agredwine4
+eksctl delete cluster --name agredwine

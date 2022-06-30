@@ -6,9 +6,9 @@ import pandas as pd
 
 #url = 'http://localhost:5000/predict'
 #url = 'http://redwineapp.centralindia.azurecontainer.io:5000/predict'
-url ='https://redwineapp.lemongrass-1ee42dd2.canadacentral.azurecontainerapps.io/predict'
-# url ='http://20.116.81.213:5000/predict'
-
+#url ='https://redwineapp.lemongrass-1ee42dd2.canadacentral.azurecontainerapps.io/predict'
+url ='http://18.215.252.74:5000/predict'
+# url = 'http://a987722c1b0cd48afad471f1e88b6d94-8579ecac9beb1e6a.elb.us-east-1.amazonaws.com/predict'
 
 
 st.title("Red wine prediction system")

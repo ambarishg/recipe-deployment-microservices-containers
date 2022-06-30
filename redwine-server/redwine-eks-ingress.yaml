@@ -31,7 +31,7 @@ spec:
   selector:
     app: web
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: redwine-ingress
@@ -42,7 +42,14 @@ spec:
   rules:
   - http:
       paths:
-        - path: /
-          backend:
-            serviceName: redwine-service
-            servicePort: 5000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: redwine-service
+            port:
+              number: 5000
+---
+
+
+            
