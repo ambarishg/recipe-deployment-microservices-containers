@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: winedeploy
+  labels:
+    app: winedeployapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wine
+  template:
+    metadata:
+      labels:
+        app: wine
+    spec:
+      containers:
+        - name: wineimage
+          image: agwineacr.azurecr.io/redwine:v1 
+          ports:
+            - containerPort: 8501
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redwine-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8501
+  selector:
+    app: wine
